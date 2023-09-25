@@ -1,0 +1,42 @@
+<%= form_with(model: raza) do |form| %>
+  <% if raza.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(raza.errors.count, "error") %> prohibited this raza from being saved:</h2>
+
+      <ul>
+        <% raza.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nombre, style: "display: block" %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.label :personalidad, style: "display: block" %>
+    <%= form.text_area :personalidad %>
+  </div>
+
+    <div>
+    <%= form.label :tamano, style: "display: block" %>
+    <%= form.text_area :tamano %>
+  </div>
+
+    <div>
+    <%= form.label :pelaje, style: "display: block" %>
+    <%= form.text_area :pelaje %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

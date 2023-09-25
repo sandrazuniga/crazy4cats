@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @raza %>
+
+<div>
+  <%= link_to "Edit this raza", edit_raza_path(@raza) %> |
+  <%= link_to "Back to razas", razas_path %>
+
+  <%= button_to "Destroy this raza", @raza, method: :delete %>
+</div>

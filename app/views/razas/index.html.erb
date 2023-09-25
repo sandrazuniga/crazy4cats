@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Crazy4cats</h1>
+
+<table class="table table-dark table-striped-columns">
+  <tr class="color-dark">
+    <td>Nombre</td>
+    <td>Description</td>
+    <td>Consultar</td>
+    <td>Modificar</td>
+  </tr>
+
+  <% @razas.each do |raza| %>
+    <tr>
+      <td><%= raza.nombre %></td>
+      <td><%= raza.description %></td>
+      <td><%= link_to "Consultar", raza %></td>
+      <td><%= link_to "Modificar", edit_raza_path(raza) %></td>
+    </tr>
+  <% end %>
+</div>
+
+
+</table>
+
+<%= link_to "New raza", new_raza_path, class: "btn btn-dark" %>
